@@ -1,0 +1,212 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <title> Contact Form </title>
+    <link rel="icon" type="images" href="contact.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .body {
+            background-color: salmon;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0ex;
+        }
+        
+        h1 {
+            color: steelblue;
+        }
+        
+        h2 {
+            color: royalblue;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0ex;
+            cursor: pointer;
+            background-color: salmon;
+            text-decoration: none;
+        }
+        
+        .navbar-container {
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            height: 100%;
+            color: black;
+            font-family: "Sen", sans-serif;
+            text-decoration: none;
+        }
+        
+        .menu-container {
+            flex: 6;
+            text-decoration: none;
+        }
+        
+        .menu-list {
+            display: flex;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        .menu-list-item {
+            margin-right: 30px;
+        }
+        
+        .menu-list-item.active {
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .nav-list {
+            list-style: none;
+            padding: 2px 6px;
+        }
+        
+        .nav-list li a {
+            text-decoration: none;
+            color: darkblue;
+            display: flex;
+        }
+        
+        .featured-content {
+            height: 50vh;
+            padding: 50px;
+            background-color: rosybrown;
+            background-attachment: fixed;
+        }
+        
+        .bg-img {
+            height: 20px;
+            width: 40px;
+            padding: 30px;
+            backface-visibility: visible;
+        }
+        
+        .container {
+            position: absolute;
+            margin: 20px;
+            right: 450;
+            max-width: 400px;
+            padding: 20px;
+            background-color: lightskyblue;
+        }
+        
+        input[type=text],
+        input[type=date],
+        input[type=number],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+        
+        .input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        .btn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        
+        .btn:hover {
+            opacity: 1;
+        }
+    </style>
+    <center>
+        <b><em><h1>Contact Us </h1></b></em>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <div class="menu-container">
+                    <ul class="menu-list"></ul>
+                    <ul class="nav-list">
+                        <b><a class="menu-list-item active" href="#">Home</a></b>
+                        <b><a class="menu-list-item active" href="#">Contact Us</a></b>
+                        <b><a class="menu-list-item active" href="#">About Us</a></b>
+                    </ul>
+        </nav>
+        <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('bg.jpg');">
+            <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('bg1.jpg');">
+                <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('bg2.jpeg');">
+
+                    <form action="/action.page.php" class="container">
+                        <b><h2>Contact Form</h2></b>
+                        <label for="fname"><b>First Name</b></label>
+                        <input type="text" id="fname" name="fname" placeholder="Enter First Name" required>
+
+                        <label for="lname"><b>Last Name</b></label>
+                        <input type="text" id="lname" placeholder="Enter Last Name" name="lname" required>
+
+                        <label for="address"><b>Address</b></label>
+                        <textarea type="text" id="address" name="address" placeholder="Write address.." style="height:200px"></textarea>
+
+                        <label for="birthdate"><b>BirthDate</b></label>
+                        <input type="date" id="birthdate" placeholder="Enter Birthdate" name="birthdate" required>
+                        <br />
+                        <label for="phone"><b>Mobile No</b></label>
+                        <input type="number" id="phone" name="phone" placeholder="Enter Phone No" name="phone" required>
+                        <label for="sex"><b>Sex</b></label>
+                        <select id="sex" name="sex" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                </select>
+                        <label for="city"><b>City</b></label>
+                        <select id="city" name="city" required>
+                 <option value="Navi Mumbai">Navi Mumbai</option>
+                 <option value="Thane">Thane</option>
+                 <option value="pune">Pune</option>
+                 <option value="ghansoli">Ghansoli</option>
+                 </select>
+                        <label for="country"><b>Country</b></label>
+                        <select id="country" name="country" required>
+                 <option value="India">India</option>
+                 <option value="U.S">U.S</option>
+                 <option value="Japan">Japan</option>
+                 <option value="Australia">Australia</option>
+                 </select>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" id="email" name="email" pattern="Enter your Email-Id" name="email" required>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </center>
+    <div class="bg-img"></div>
+</body>
+
+</html>
